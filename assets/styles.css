@@ -177,10 +177,10 @@ p{max-width:65ch}
 
 /* ---------- STRIP (pasek skrótów / liczby) ---------- */
 .strip{background:var(--dark);color:#fff}
-.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-6);padding-block:var(--space-8)}
-.strip .item .k{font-family:var(--font-display);font-size:clamp(1.05rem,.95rem + .55vw,1.4rem);font-weight:600;letter-spacing:.01em;color:#fff}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:var(--space-4) var(--space-7);padding-block:var(--space-6)}
+.strip .item .k{font-family:var(--font-display);font-size:clamp(.82rem,.76rem + .25vw,.95rem);font-weight:600;letter-spacing:.01em;color:#fff;white-space:nowrap}
 .strip .item .v{font-size:var(--text-sm);color:rgba(255,255,255,.66);margin-top:var(--space-2);line-height:1.45}
-.strip .item{border-left:2px solid var(--accent);padding-left:var(--space-5)}
+.strip .item{border-left:2px solid var(--accent);padding-left:var(--space-4)}
 
 /* ---------- SECTION HEAD ---------- */
 .head{max-width:48rem;margin-bottom:var(--space-8)}
@@ -310,7 +310,7 @@ footer{background:var(--dark);color:#fff;padding-block:var(--space-9) var(--spac
   .hero-grid,.split,.split.rev,.svc-row,.svc-row.rev,.cta .wrap,.contact-grid,.foot-grid{grid-template-columns:1fr}
   .split.rev .split-art,.svc-row.rev .svc-row-art{order:0}
   .hero-art{aspect-ratio:16/10;max-height:420px}
-  .strip .wrap{grid-template-columns:repeat(2,1fr);gap:var(--space-7)}
+  .strip .wrap{gap:var(--space-4) var(--space-6)}
   .gallery{grid-auto-rows:180px}
   .t-wide,.t-tall,.t-std,.t-third,.t-two3{grid-column:span 6}
   .t-tall{grid-row:span 1}
@@ -325,7 +325,7 @@ footer{background:var(--dark);color:#fff;padding-block:var(--space-9) var(--spac
   .nav-links a{padding-block:var(--space-4);border-bottom:var(--hairline)}
   .nav-links .btn{margin-top:var(--space-3);justify-content:center}
   .nav-toggle{display:flex}
-  .strip .wrap{grid-template-columns:1fr}
+  .strip .wrap{gap:var(--space-3) var(--space-5)}
   .gallery{grid-template-columns:repeat(6,1fr)}
   .foot-grid{grid-template-columns:1fr}
 }
