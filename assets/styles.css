@@ -5,18 +5,20 @@
    ============================================================ */
 
 :root{
-  /* PALETA — z logo MAR BUD MEBLE: granat #130d3b + jasny niebieski #009fe3 + biel */
-  --paper:#130D3B;          /* główne tło — granat jak romb logo */
-  --paper-2:#1A1449;        /* sekcje alternatywne (jaśniejszy granat) */
-  --paper-3:#201A56;        /* delikatne wypełnienia */
-  --ink:#FFFFFF;            /* tekst główny — biały jak „MAR BUD" w logo */
-  --ink-soft:#D9DEF0;       /* nagłówki drugorzędne */
-  --muted:#A6AECB;          /* tekst poboczny — jasny, czytelny na granacie */
-  --line:rgba(255,255,255,.16);/* hairline */
+  /* PALETA — z logo MAR BUD MEBLE: granat #130d3b + jasny niebieski #009fe3 + biel.
+     23.07.2026 (prośba Marcelego „więcej białego w tle"): tła sekcji BIAŁE/jasne,
+     tekst granatowy; granat zostaje w hero/pasku/CTA/stopce (var --dark). */
+  --paper:#FFFFFF;          /* główne tło — biel jak napisy w logo */
+  --paper-2:#F4F7FC;        /* sekcje alternatywne (bardzo jasny błękit) */
+  --paper-3:#E9EEF7;        /* delikatne wypełnienia */
+  --ink:#130D3B;            /* tekst główny — granat jak romb logo */
+  --ink-soft:#2A2558;       /* nagłówki drugorzędne */
+  --muted:#5A6180;          /* tekst poboczny — stonowany granatowy szary */
+  --line:rgba(19,13,59,.14);/* hairline */
   --accent:#009FE3;         /* jasny niebieski jak „MEBLE" w logo */
-  --accent-d:#33B6F0;       /* hover — jaśniejszy (na ciemnym tle rozjaśniamy) */
-  --accent-soft:rgba(0,159,227,.14);
-  --dark:#0C0830;           /* sekcje ciemne (stopka/CTA) — najgłębszy granat */
+  --accent-d:#0080BE;       /* hover — ciemniejszy (na jasnym tle przyciemniamy) */
+  --accent-soft:rgba(0,159,227,.12);
+  --dark:#0C0830;           /* sekcje ciemne (stopka/CTA/pasek) — najgłębszy granat */
 
   /* ODSTĘPY — skala 4/8 */
   --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
@@ -285,7 +287,7 @@ p{max-width:65ch}
 .form label{display:block;font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-2)}
 .form input,.form textarea{width:100%;font-family:inherit;font-size:var(--text-base);color:var(--ink);
   padding:var(--space-4);border:var(--hairline);border-radius:var(--r-sm);background:var(--paper);transition:border-color var(--dur)}
-.form input:focus,.form textarea:focus{outline:none;border-color:var(--accent);background:rgba(255,255,255,.06)}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--accent);background:#fff}
 .form textarea{resize:vertical;min-height:120px}
 .form .note{font-size:var(--text-sm);color:var(--muted);margin-top:var(--space-3)}
 
@@ -432,6 +434,7 @@ section{padding-block:clamp(64px,8vw,128px)}
 .godz-row span{color:var(--muted);white-space:nowrap}
 
 /* === paleta z LOGO MAR BUD MEBLE (23.07.2026, prośba Marcelego): granat #130d3b,
-   jasny niebieski #009fe3, biel. UWAGA: ten blok :root WYGRYWA nad bazowym u góry —
-   trzymać oba spójnie. === */
-:root{--accent:#009FE3;--accent-d:#33B6F0;--accent-soft:rgba(0,159,227,0.14);--paper:#130D3B;--paper-2:#1A1449;--paper-3:#201A56;}
+   jasny niebieski #009fe3, biel. 23.07.2026 wieczorem („więcej białego w tle"):
+   tła sekcji BIAŁE, tekst granatowy; granat tylko w hero/pasku/CTA/stopce.
+   UWAGA: ten blok :root WYGRYWA nad bazowym u góry — trzymać oba spójnie. === */
+:root{--accent:#009FE3;--accent-d:#0080BE;--accent-soft:rgba(0,159,227,0.12);--paper:#FFFFFF;--paper-2:#F4F7FC;--paper-3:#E9EEF7;--ink:#130D3B;--ink-soft:#2A2558;--muted:#5A6180;--line:rgba(19,13,59,.14);}
